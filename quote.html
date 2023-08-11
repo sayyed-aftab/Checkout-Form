@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RandomQuotes</title>
+</head>
+<body>
+        <div class="container">
+            <p id="quote-text"> click the button </p>
+            <button id="quote-button">Generate the Quotes</button>
+        </div>
+        <script>
+            const quotes = ["Be yourself; everyone else is already taken. - Oscar Wilde",
+             "Two things are infinite: the universe and human stupidity; and I'm not sure about the universe. - Albert Einstein",
+             "The only way to do great work is to love what you do. - Steve Jobs",
+            "You miss 100% of the shots you don't take. - Wayne Gretzky",
+           "The future belongs to those who believe in the beauty of their dreams. - Eleanor Roosevelt",
+            "Happiness is not something ready-made. It comes from your own actions. - Dalai Lama"
+];
+function RandomGenerator(){
+const randomquote= Math.floor(Math.random() * quotes.length);
+const quoteIndex =document.getElementById('quote-text');
+quoteIndex.textContent = quotes[randomquote];
+}
+const quoteBotton = document.getElementById('quote-button');
+quoteBotton.addEventListener('click', RandomGenerator);
+
+</script>
+</body>
+</html>
